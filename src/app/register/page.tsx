@@ -40,7 +40,7 @@ const Register: NextPage = () => {
           <input
             className="border-2 p-3 w-full rounded-md border-yellow-500 focus:outline-green-500"
             type="text"
-            placeholder="text"
+            placeholder="Name"
             {...register("name", { required: true })}
           />
           <br />

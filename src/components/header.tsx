@@ -9,39 +9,41 @@ export const Header = () => {
   const { data: session } = useSession();
 
   return (
-    <div className="p-[30px] bg-yellow-500  text-white font-bold text-lg">
-      <div className="container flex justify-between gap-5">
-        <div className="flex">
-          <Link
-            className="hover:underline transition-all flex gap-3 justify-center items-center p-3 border-r-2"
-            href="/"
-          >
-            <HomeIcon />
-            Home
-          </Link>
-          {session && (
+    <div className=" bg-yellow-500  text-white font-bold text-lg">
+      <div className="container">
+        <div className="flex justify-between gap-2">
+          <div className="flex">
             <Link
-              className="hover:underline transition-all flex gap-3 justify-center items-center p-3 border-r-2"
-              href="/profile"
+              className="hover:underline transition-all flex gap-1 md:gap-3 justify-center items-center p-2 md:p-3 border-r-2"
+              href="/"
             >
-              <ProfileIcon />
-              Profile
+              <HomeIcon />
+              Home
             </Link>
-          )}
-        </div>
-        <div className="flex gap-5">
-          <Link
-            className="hover:underline transition-all p-3 border-2 rounded-md hover:bg-white hover:text-yellow-500"
-            href="/register"
-          >
-            Register
-          </Link>
-          <Link
-            className="hover:underline transition-all p-3 border-2 rounded-md hover:bg-white hover:text-yellow-500"
-            href="/login"
-          >
-            Login
-          </Link>
+            {session && (
+              <Link
+                className="hover:underline transition-all flex gap-1 md:gap-3 justify-center items-center p-2 md:p-3 border-r-2"
+                href="/profile"
+              >
+                <ProfileIcon />
+                Profile
+              </Link>
+            )}
+          </div>
+          <div className="flex gap-2 md:gap-5">
+            <Link
+              className="hover:underline transition-all p-2 md:p-3 border-2 rounded-md hover:bg-white hover:text-yellow-500"
+              href="/register"
+            >
+              Register
+            </Link>
+            <Link
+              className="hover:underline transition-all p-2 md:p-3 border-2 rounded-md hover:bg-white hover:text-yellow-500"
+              href="/login"
+            >
+              Login
+            </Link>
+          </div>
         </div>
       </div>
     </div>
